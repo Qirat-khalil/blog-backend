@@ -18,7 +18,11 @@ app.use(cors({
   credentials: true
 }))
 
-
+app.get('/',(req,res)=>{
+  res.json({
+    message: "welcome"
+  })
+})
 app.use('/api/auth',authRoutes)
 
 app.use('/api/blog',blogRoutes)
