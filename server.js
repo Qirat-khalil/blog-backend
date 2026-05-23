@@ -17,7 +17,13 @@ connectDB()
 
 
 
-app.listen(3000,()=>{
-    console.log('server is running');
+if(process.env.dev === "local"){
     
-})
+    app.listen(3000,()=>{
+        console.log('server is running');
+        
+    })
+    
+}
+
+export default app;
